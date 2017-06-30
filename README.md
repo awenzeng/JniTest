@@ -4,7 +4,7 @@ Android开发环境，Android-SDK，java-SDK,android-NDK相关环境（略：网
 
 **1.项目右键设置，安装完成之后如图：**
 
-![](/assets/img/ndk_config.jpg)
+![](http://awenzeng.me/assets/img/ndk_config.png)
 
 **2.在项目的gradle.properties文件中加上 android.useDeprecatedNdk = true**
 
@@ -50,7 +50,7 @@ javah -d jni -classpath D:\sdk\platforms\android-25\android.jar;E:\githup\JniTes
 ```
 生成头文件如图：
 
-![](/assets/img/ndk_build_headfile.png)
+![](http://awenzeng.me/assets/img/ndk_build_headfile.png)
 
 <!-- more -->
 
@@ -128,22 +128,22 @@ jstring  Java_com_awen_jnitest_JNIUtil_getStringFromJni
 
 具体如图
 
-![](/assets/img/ndk_gradle_config.png)
+![](http://awenzeng.me/assets/img/ndk_gradle_config.png)
 
 **iV.执行Build->Rebuild Project或Make Project，so库就会自动生成，具体如图：**
 
-![](/assets/img/ndk_build_so.png)
+![](http://awenzeng.me/assets/img/ndk_build_so.png)
 
 ### 2.Android studio配置工具编译和生成so库
 
 **i.Android studio工具配置**
 
 为了方便生成头文件和so文件，我们可以在Android Studio → External Tools中设置两个命令，分别来生成头文件和生成.so文件
-![](/assets/img/ndk_tools.png)
+![](http://awenzeng.me/assets/img/ndk_tools.png)
 
 javah:
 
-![](/assets/img/ndk_tool_javah.png)
+![](http://awenzeng.me/assets/img/ndk_tool_javah.png)
 
 具体配置代码：
 
@@ -161,7 +161,7 @@ Working
 
 ndk-build:
 
-![](/assets/img/ndk_tool_ndk_build.png)
+![](http://awenzeng.me/assets/img/ndk_tool_ndk_build.png)
 
 具体配置代码：
 
@@ -181,19 +181,19 @@ $ModuleFileDir$\src\main
 
 **头文件.h的生成，具体操作如图：**
 
-![](/assets/img/ndk_tool_gen_headfile.png)
+![](http://awenzeng.me/assets/img/ndk_tool_gen_headfile.png)
 
 具体步骤：
 
 选中JNIUtil点击右键，显示如上图，选中NDK，点击javah，就会自动生成头文件，具体位置如图：
 
-![](/assets/img/ndk_build_headfile.png)
+![](http://awenzeng.me/assets/img/ndk_build_headfile.png)
 
 **.c文件生成和第一种一样（这里略）**
 
 **so库文件生成，点击ndk-build，生成库文件，具体如图：**
 
-![](/assets/img/ndk_ndk_build_so.png)
+![](http://awenzeng.me/assets/img/ndk_ndk_build_so.png)
 
 
 到此，两种方法生成讲解完毕。
